@@ -66,3 +66,4 @@ disallow unsafe inline javascript by replacing
     return r
 ```
 # blind_xss_demo
+simple blind xss app
