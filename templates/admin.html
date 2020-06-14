@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+{% autoescape false %}
+<strong>Here you can find all users comments:</strong><br><br>
+    <!-- Comments -->
+    {% if not search_query %}
+      <h3>All comments:</h3>
+    {% else %}
+      <h3>Showing comments containing "{{ search_query }}":</h3>
+    {% endif %}
+
+    {% for comment in comments %}
+      <div>
+          <tr>
+              <td>
+                  <p>{{ comment }}</p>
+              </td>
+            </tr>
+      </div>
+    {% endfor %}
+{% endautoescape %}
+{% include 'footer.html' %}

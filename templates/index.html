@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blind XSS Demo</title>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <h1>Blind XSS Demo</h1>
+      
+    </header>
+
+     <!-- Write form -->
+    <form action="/" method="POST">
+      <input type="text" name="comment" 
+             placeholder="Comment" autocomplete="off" />
+      <input type="submit" value="Submit new comment" />
+    </form>
+    <h3>{{ thankyou }}</h3>
+  </body>
+</html>
+{% endautoescape %}
